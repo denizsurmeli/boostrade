@@ -10,19 +10,17 @@ from binance.client import Client
 """
 We will test that if we can match the timezones and data correctly:
 Google Trends API will be our north star for the trading strategy,
-Binance API will be used as our Cryptocurrency exchange, hence the data will be retrieved from them.
+Binance API will be used as our Cryptocurrency exchange, hence the data will be retrieved from it.
 EVERY TRANSACTION WILL BE PAIRED AS XXXX/USDT OR XXXX/USD.
 PORTFOLIO OPTIMIZATION WILL NOT BE A PART OF OUR PROTOTYPE.
 Backtesting AND testing will be implemented later on.
 
-IT MUST be known that the first developer @denizsurmeli is a very inexperienced developer and 
-projects developed by him must be used/inspired carefully.
 """
 
 # These database connections are using for test purposes only.
 # The other developers must use a local host with different credentials.
 # The variables must be monitored for leaks.
-dbconn = psycopg2.connect("dbname=testdb user=postgres password=h2nru4ye")
+dbconn = psycopg2.connect("dbname=testdb user=postgres password=TEMP")
 dbcur = dbconn.cursor()
 
 apiDataFile = open("credentials.json")
